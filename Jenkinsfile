@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                echo ${HOME}
                 sh 'docker build --no-cache -t test/test-image:0.1 .'
             }
         }
